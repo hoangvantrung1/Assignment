@@ -1,0 +1,23 @@
+<div class="container">
+
+    <form #edit="ngForm" (ngSubmit)="onEdit(edit.value)">
+        <div>
+            <label for="" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="oldProject.name">
+
+        </div>
+        <div>
+            <label for="" class="form-label">Description</label>
+            <input type="text" class="form-control" name="description" [(ngModel)]="oldProject.description">
+        </div>
+        <div>
+            <label for="" class="form-label">TeamSize</label>
+            <input type="number" class="form-control" name="teamSize" [(ngModel)]="oldProject.teamSize">
+        </div>
+        <div>
+            <label for="dateOfStart" class="form-label">>Date of Start</label>
+            <input type="datetime-local" class="form-control" name="dateOfStart" [(ngModel)]="oldProject.dateOfStart">
+        </div>
+        <input type="submit" class="btn btn-success mt-2 mx-auto d-block"  value="Sửa">
+    </form>
+</div>
